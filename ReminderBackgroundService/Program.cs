@@ -9,6 +9,7 @@ namespace ReminderBackgroundService
         {
             var builder = Host.CreateApplicationBuilder(args);
             
+            //Add builder Audio Service(AudioService.cs) and worker(Worker.cs)
             builder.Services.AddSingleton<IAudioService, AudioService>();
             builder.Services.AddHostedService<Worker>();
 
