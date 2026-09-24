@@ -8,7 +8,7 @@ Supported OS: Windows(10+), Linux(Tested on Debian 13 and Arch)
 Supported Audio Formats: .wav only
 
 ## Installation
-Download the latest version from [Packages]() and unzip it into your desired installation folder.
+Download the latest version from [Packages](https://github.com/Maeve-B-dev/RemindME-BackgroundService/releases) and unzip it into your desired installation folder.
 
 ### Windows
 **Command-Line usage:**
@@ -19,6 +19,11 @@ Run `ReminderBackgroundService.exe`
 
 **Background Service usage:**
 
+The program will run invisibly in the background. Useful for everyday usage. Uses less ram.
+
+Starting: Run `BackgroundStart.vbs`. Allow the programm to run as Administrator(Necessary to add/remove a background service). You should see a PopUp confirming the start of the service.
+
+Stopping: Run `BackgroundStop.vbs`. You can also stop & delete `ReminderBackgroundServices` using either `sc.exe` or `services.msc`
 
 ### Linux
 **Command-Line usage:**
@@ -29,6 +34,11 @@ Make `ReminderBackgroundService` executable by opening a terminal in your instal
 
 **Background Service usage:**
 
+The program will run invisibly in the background. Useful for everyday usage. Uses less ram.
+
+Starting: Run `start.sh`. The programm will create a new directory containing the PID of the process, should you need it.
+
+Stopping: Run `stop.sh`. `/tmp/` will be deleted!
 
 ## Configuration
 In Appsettings.json, modify any Variables under "AppSettings". The following Variables are available:
